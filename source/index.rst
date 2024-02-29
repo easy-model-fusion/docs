@@ -10,7 +10,8 @@ Welcome to easy model fusion's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   client.rst
+   sdk.rst
 
 Indices and tables
 ==================
