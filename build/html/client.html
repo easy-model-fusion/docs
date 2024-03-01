@@ -47,7 +47,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Client</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#titre-de-niveau-2">Titre de niveau 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#titre-de-niveau-3">Titre de niveau 3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#un-autre-titre-de-niveau-2">Un autre titre de niveau 2</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="sdk.html">Sdk</a></li>
 </ul>
 
@@ -78,6 +85,112 @@
   <section id="client">
 <h1>Client<a class="headerlink" href="#client" title="Permalink to this heading"></a></h1>
 <p>Client documentation page.</p>
+<section id="titre-de-niveau-2">
+<h2>Titre de niveau 2<a class="headerlink" href="#titre-de-niveau-2" title="Permalink to this heading"></a></h2>
+<section id="titre-de-niveau-3">
+<h3>Titre de niveau 3<a class="headerlink" href="#titre-de-niveau-3" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="un-autre-titre-de-niveau-2">
+<h2>Un autre titre de niveau 2<a class="headerlink" href="#un-autre-titre-de-niveau-2" title="Permalink to this heading"></a></h2>
+<p>Voici du texte en <em>italique</em>, en <strong>gras</strong>, et voici du <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">inline</span></code>.</p>
+<p>Pour faire un lien inline c’est simple :
+lien vers le <a class="reference external" href="https://github.com/easy-model-fusion/docs/">liens de la doc</a></p>
+<p>Liste à puce :</p>
+<ul class="simple">
+<li><p>Ceci est une liste</p></li>
+<li><p>un autre élément</p>
+<ul>
+<li><p>Une sous-liste</p></li>
+<li><p>notez bien le saut de ligne avec la liste principale,
+ça ne marchera pas si vous l’oubliez !</p></li>
+</ul>
+</li>
+<li><p>un dernier élément</p></li>
+</ul>
+<p>Liste ordonnée :</p>
+<ol class="arabic simple">
+<li><p>Un</p></li>
+<li><p>Deux</p></li>
+<li><p>Trois</p></li>
+</ol>
+<p>Voici comment faire un bloc de code simple</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ceci</span> <span class="n">est</span> <span class="n">un</span> <span class="n">bloc</span> <span class="n">de</span> <span class="n">code</span><span class="o">.</span> <span class="n">Il</span> <span class="n">est</span> <span class="n">créé</span> <span class="n">grâce</span> <span class="n">aux</span> <span class="n">doubles</span> <span class="n">deux</span><span class="o">-</span><span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>On peut aussi définir un bloc de code avec une syntaxe
+plus explicite, grâce à laquelle on peut indiquer à Sphinx dans quel
+langage il est rédigé, ce qui lui permettra d’activer la coloration
+syntaxique :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ceci est un bloc de code Python</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ceci est une note.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ceci est un avertissement !</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ceci est important !</p>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Heading 1</p></th>
+<th class="head"><p>Heading 2</p></th>
+<th class="head"><p>Heading 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hello</p></td>
+<td><p>World</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>foo</p></td>
+<td colspan="2" rowspan="2"><p>bar</p></td>
+</tr>
+<tr class="row-even"><td><p>baz</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Délices glacés!</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Produit</p></th>
+<th class="head"><p>Quantité</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albatross</p></td>
+<td><p>2.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crunchy Frog</p></td>
+<td><p>1.49</p></td>
+<td><dl class="simple">
+<dt>If we took the bones out, it wouldn’t be</dt><dd><p>crunchy, now would it?</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><p>Gannet Ripple</p></td>
+<td><p>1.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 
 

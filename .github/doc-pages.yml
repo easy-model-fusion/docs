@@ -32,8 +32,8 @@ jobs:
       # a modifier pour correspondre au projet
 
       - name: "Deploy Github Pages"
-        uses: easy-model-fusion/github-pages-deploy-action@3.7.1  # JamesIves/github-pages-deploy-action@3.7.1 
+        uses: JamesIves/github-pages-deploy-action@3.7.1 
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # gh-pages 
+          BRANCH: main
           FOLDER: build/html/
