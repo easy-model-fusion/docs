@@ -4,14 +4,17 @@ on:
   push:
     branches:
       - main
+      
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@v2
+      - name: "Checkout 🛎️"
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
@@ -25,14 +28,14 @@ jobs:
           pip3 install setuptools
           pip3 install sphinx sphinx-rtd-theme
 
-      - name: "Build Sphinx Doc"
+      - name: "Build Sphinx Doc 🔧"
         run: |
           make html
 
       # a modifier pour correspondre au projet
 
-      - name: "Deploy Github Pages"
-        uses: JamesIves/github-pages-deploy-action@3.7.1 
+      - name: "Deploy Github Pages 🚀"
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: main
