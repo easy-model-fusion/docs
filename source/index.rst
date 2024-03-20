@@ -20,3 +20,4 @@ environments and deploy applications across various platforms with ease |:chart_
    examples.rst
    emf-cli.rst
    sdk.rst
+   contributing.rst

@@ -10,10 +10,8 @@ Installing the theme
 pip install --upgrade sphinx_rtd_theme
 ```
 
-Installing emojis
-```shell
-pip install sphinxemoji
-```
+Installing emojis :
+https://sphinxemojicodes.readthedocs.io/en/stable/
 
 # Build
 
