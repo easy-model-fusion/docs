@@ -1,5 +1,5 @@
 ===========
-Sdk
+SDK
 ===========
 
 Sdk documentation page.

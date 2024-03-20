@@ -1,5 +1,5 @@
 ===========
-Client
+EMF CLI
 ===========
 
 Client documentation page.

@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'easy model fusion'
+project = 'Easy Model Fusion'
 copyright = '2024, tbd'
 author = 'tbd'
 release = 'tbd'

@@ -1,5 +1,5 @@
 ===========
-emf-cli
+EMF CLI
 ===========
 
 Client documentation page.
@@ -95,7 +95,7 @@ syntaxique :
 
 
 
-.. csv-table:: Délices glacés!
+.. csv-table:: Title!
         :header: "Produit", "Quantité", "Description"
         :widths: 15, 10, 30
 
