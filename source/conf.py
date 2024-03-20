@@ -15,7 +15,8 @@ release = 'tbd'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinxemoji.sphinxemoji',
 ]
 
 templates_path = ['_templates']

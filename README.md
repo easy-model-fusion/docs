@@ -10,6 +10,11 @@ Installing the theme
 pip install --upgrade sphinx_rtd_theme
 ```
 
+Installing emojis
+```shell
+pip install sphinxemoji
+```
+
 # Build
 
 Building for HTML
