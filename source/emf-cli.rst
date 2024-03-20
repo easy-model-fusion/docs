@@ -1,8 +1,8 @@
-===========
-Client
-===========
+==============================================================================
+[|:construction:| WIP |:construction:|] EMF Command Line Interface
+==============================================================================
 
-Client documentation page.
+EMF Command Line Interface page.
 
 
 Titre de niveau 2
@@ -95,7 +95,7 @@ syntaxique :
 
 
 
-.. csv-table:: Délices glacés!
+.. csv-table:: Title!
         :header: "Produit", "Quantité", "Description"
         :widths: 15, 10, 30
 

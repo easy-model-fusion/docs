@@ -1,21 +1,24 @@
-.. easy model fusion documentation master file, created by
+.. easy-model-fusion documentation master file, created by
    sphinx-quickstart on Thu Feb 29 09:58:53 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to easy model fusion's documentation!
-=============================================
+Welcome to Easy Model Fusion |:hand_splayed:|
+====================================================================
+
+Easy Model Fusion is an open-source solution designed to simplify and automate
+the development process for artificial intelligence (AI) applications |:robot:|.
+This toolkit empowers developers to seamlessly manage AI models, configure development
+environments and deploy applications across various platforms with ease |:chart_with_upwards_trend:|.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   client.rst
+   about.rst
+   how-does-it-work.rst
+   how-to-get-started.rst
+   examples.rst
+   emf-cli.rst
    sdk.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   contributing.rst
