@@ -1,8 +1,10 @@
-===========
-EMF CLI
-===========
+==========================
+EMF Command Line Interface
+==========================
 
-Client documentation page.
+WIP
+
+EMF Command Line Interface page.
 
 
 Titre de niveau 2

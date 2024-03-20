@@ -6,16 +6,17 @@
 Welcome to Easy Model Fusion's documentation!
 =============================================
 
+Easy Model Fusion is an open-source solution designed to simplify and automate
+the development process for artificial intelligence (AI) applications.
+This toolkit empowers developers to seamlessly manage AI models, configure development
+environments and deploy applications across various platforms with ease.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   how-does-it-work.rst
+   how-to-get-started.rst
+   examples.rst
    emf-cli.rst
    sdk.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
