@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Easy Model Fusion |:hand_splayed:|
+Welcome to Easy Model Fusion |:wave:|
 ====================================================================
 
 Easy Model Fusion is an open-source solution designed to simplify and automate
