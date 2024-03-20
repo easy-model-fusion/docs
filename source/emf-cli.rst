@@ -1,8 +1,6 @@
-==========================
-EMF Command Line Interface
-==========================
-
-WIP
+==============================================================================
+[|:construction:| WIP |:construction:|] EMF Command Line Interface
+==============================================================================
 
 EMF Command Line Interface page.
 
