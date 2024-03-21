@@ -15,9 +15,9 @@ environments and deploy applications across various platforms with ease |:chart_
    :maxdepth: 2
    :caption: Contents:
 
-   about.rst
-   how-does-it-work.rst
-   how-to-get-started.rst
+   overview.rst
+   installation.rst
+   basics.rst
    examples.rst
    emf-cli.rst
    sdk.rst
