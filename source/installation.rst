@@ -2,19 +2,13 @@
 Installation
 ==============================================================
 
-.. NOTE::
-
-   Before you begin.
-    1. Explain emf-cli briefly
-    2. Justify why it's mandatory
-
 .. WARNING::
 
-    Please have Python 3.10 or higher installed and add it to the PATH.
+    **Python Requirements**
 
-    You can download Python here: `https://www.python.org/downloads/ <https://www.python.org/downloads/>`_
+    EMF CLI requires `Python <https://www.python.org/downloads>`_ version 3.10 or above. You also need to add it to the PATH.
 
-Install emf-cli
+Install EMF Command Line Interface
 ----------------------------------
 
 .. toctree::
