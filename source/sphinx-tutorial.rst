@@ -1,9 +1,6 @@
 ==============================================================================
-[|:construction:| WIP |:construction:|] EMF Command Line Interface
+Sphinx tutorial
 ==============================================================================
-
-EMF Command Line Interface page.
-
 
 Titre de niveau 2
 -----------------
