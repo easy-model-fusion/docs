@@ -2,41 +2,56 @@
 Basics
 ============================================================
 
-Basics page.
-
 Creating a project
 ----------------------------------
 
-To create a new project, run:
+To create a new project, run :
 
 .. code-block:: shell
 
    emf-cli init awesome-ia-app
 
-**Congratulations on creating your first project!** |:clap:|
-
-You've successfully taken your first step with the EMF toolkit. Now, it's time to dive deeper and unlock the full potential of this powerful tool.
-
-explain the architecture of the project
-:doc:`custom text <config-yaml>`
-explain the config.yaml file
-
-Installing an already existing project
+Installing an existing project
 --------------------------------------
 
-To create a new project, run:
+|:construction:| WIP |:construction:|
 
-Handling models
+Understanding its content
+--------------------------------------
+
+Let's enter you project's folder and analyze it :
+
+.. code-block:: shell
+
+    awesome-ia-app
+    ├── .venv/
+    ├── models/
+    ├── sdk/
+    ├── config.yaml
+    ├── main.py
+
+* ``.venv/`` encapsulates all Python dependencies required by the project, ensuring a clean and isolated environment for development.
+* ``models/`` contains the downloaded models to be used in the project.
+* ``sdk/`` contains essential tools and resources tailored for the project's development needs. For more details, refer to the :doc:`Development <development>` page.
+* ``config.yaml`` centralizes application settings, enabling user customization for behavior and AI model selection. For more details, refer to the :doc:`Configuration Reference <config-yaml>` page.
+* ``main.py`` **???**
+
+Working with models
 ----------------------------------
 
 To create a new project, run:
 
-Handling tokenizers
+Working with tokenizers
 ----------------------------------
 
 To create a new project, run:
 
 Building a project
+----------------------------------
+
+To create a new project, run:
+
+Others
 ----------------------------------
 
 To create a new project, run:
