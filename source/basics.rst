@@ -39,12 +39,85 @@ Let's enter you project's folder and analyze it :
 Working with models
 ----------------------------------
 
-To create a new project, run:
+When working with models, you will be using ``emf-cli model`` :
+
+.. code-block:: html
+
+    Palette that contains model based commands
+
+    Usage:
+        emf-cli model [flags]
+        emf-cli model [command]
+
+    Available Commands:
+        add         Add model by name to your project
+        remove      Remove one or more models
+        update      Update one or more models
+
+    Flags:
+        -h, --help   help for model
+
+    Global Flags:
+        --config-path string             config file path (default ".")
+
+    Use "emf-cli model [command] --help" for more information about a command.
+
+Adding a model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Adding a model
+
+Remove a model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Remove a model
+
+Update a model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Update a model
 
 Working with tokenizers
 ----------------------------------
 
-To create a new project, run:
+When working with tokenizers, you will be using ``emf-cli tokenizer`` :
+
+.. code-block:: html
+
+    Palette that contains tokenizer based commands
+
+    Usage:
+        emf-cli tokenizer [flags]
+        emf-cli tokenizer [command]
+
+    Available Commands:
+        add         Add one or more tokenizers
+        remove      Remove one or more tokenizers
+        update      Update one or more tokenizers
+
+    Flags:
+        -h, --help   help for tokenizer
+
+    Global Flags:
+        --config-path string             config file path (default ".")
+
+    Use "emf-cli tokenizer [command] --help" for more information about a command.
+
+Adding a tokenizer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Adding a tokenizer
+
+Remove a tokenizer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Remove a tokenizer
+
+Update a tokenizer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Update a tokenizer
+
 
 Building a project
 ----------------------------------
