@@ -248,6 +248,10 @@ The ``emf-cli tokenizer update`` command allows users to update one or more `tok
 Project synchronization (tidy)
 ----------------------------------
 
+.. warning::
+
+    Please be aware that it is currently not possible to retrieve the version or the options used while handling downloaded but not configured models.
+
 The ``emf-cli tidy`` command synchronizes the project's configuration file with the downloaded models. It ensures consistency between the configured models in the project's configuration file and the actual downloaded models on the device.
 
 Upon execution, the command performs the following tasks:
