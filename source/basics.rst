@@ -245,6 +245,54 @@ The ``emf-cli tokenizer update`` command allows users to update one or more `tok
     Global Flags:
         --config-path string             config file path (default ".")
 
+Manipulating options
+----------------------------------
+
+When specifying options with ``--model-options`` or ``--tokenizer-options``, things might be a bit tricky so let's go through the different formats and examples to ensure clarity and accuracy.
+
+Default
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When working with default values, you just have to use the following format :
+
+.. code-block:: html
+
+    --model-options key=module.value
+    --model-options key=True
+    --model-options key=123456789
+
+Multiple options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You could simply specify the flag as many times as needed :
+
+.. code-block:: html
+
+    --model-options key1=value1 --model-options key2=value2 --model-options key3=value3
+
+Or you could put them side by side and encapsulate them into double quotes :
+
+.. code-block:: html
+
+    --model-options "key1=value1 key2=value2 key3=value3"
+
+Strings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In shell scripting or command-line interfaces, quoting strings is crucial to prevent interpretation or expansion by the shell. Without quoting, certain characters or sequences might be treated specially, leading to unintended behavior :
+
+.. code-block:: html
+
+    --model-options "key='value'"
+    --model-options key="'value'"
+
+Now here is how it looks like when combining with multiple options :
+
+.. code-block:: html
+
+    --model-options "key1='value1' key2='value2' key3='value3'"
+    --model-options key="'value'"
+
 Project synchronization (tidy)
 ----------------------------------
 
