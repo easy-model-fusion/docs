@@ -1,8 +1,8 @@
 ===================================================
-[|:construction:| WIP |:construction:|] Development
+Development
 ===================================================
 
-Development documentation page.
+|:construction:| WIP |:construction:|
 
 Upgrading
 ----------------------------------

@@ -15,7 +15,6 @@ environments and deploy applications across various platforms with ease |:chart_
    :maxdepth: 2
    :caption: Contents:
 
-   sphinx-tutorial.rst
    overview.rst
    installation.rst
    basics.rst

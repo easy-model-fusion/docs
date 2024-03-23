@@ -1,5 +1,5 @@
 ===================================================
-[|:construction:| WIP |:construction:|] Examples
+Examples
 ===================================================
 
-Examples page.
+|:construction:| WIP |:construction:|

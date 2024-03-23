@@ -1,5 +1,5 @@
 ======================================================
-[|:construction:| WIP |:construction:|] Overview
+Overview
 ======================================================
 
-Overview page.
+|:construction:| WIP |:construction:|
