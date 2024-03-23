@@ -14,7 +14,21 @@ To create a new project, run :
 Installing an existing project
 --------------------------------------
 
-|:construction:| WIP |:construction:|
+The ``emf-cli install`` command sets up the development environment for an existing EMF project based on its configuration. It prepares the project for use : installing the configured models, configuring the SDK and setting up any necessary development tools.
+
+.. code-block:: html
+
+    Installs an existing EMF project. Basically combining a slightly different init and the tidy commands.
+
+    Usage:
+         emf-cli install [flags]
+
+    Flags:
+        -c, --cuda   Use torch with cuda
+        -h, --help   help for install
+
+    Global Flags:
+        --config-path string             config file path (default ".")
 
 Understanding its content
 --------------------------------------
@@ -25,16 +39,18 @@ Let's enter you project's folder and analyze it :
 
     awesome-ia-app
     ├── .venv/
+    ├── dist/
     ├── models/
     ├── sdk/
     ├── config.yaml
     ├── main.py
 
 * ``.venv/`` encapsulates all Python dependencies required by the project, ensuring a clean and isolated environment for development.
+* ``dist/`` contains the distribution files of your project, which includes the executable or packaged files ready for deployment.
 * ``models/`` contains the downloaded `models <https://huggingface.co/models>`_ to be used in the project.
 * ``sdk/`` contains essential tools and resources tailored for the project's development needs. For more details, refer to the :doc:`Development <development>` page.
 * ``config.yaml`` centralizes application settings, enabling user customization for behavior and AI model selection. For more details, refer to the :doc:`Configuration Reference <config-yaml>` page.
-* ``main.py`` **???**
+* ``main.py`` is where the magic happens : it serves as the heart of your application and showcases the full capabilities of the EMF toolkit.
 
 Working with models
 ----------------------------------
@@ -74,9 +90,31 @@ Adding a model
 
     Please ensure that the models you intend to use adhere to these specifications. Using unsupported models may lead to unexpected behavior or errors in the application.
 
-|:construction:| WIP |:construction:|
+| The ``emf-cli model add`` command allows users to add a model to their project by specifying the model name and optional configuration flags.
+| For more information on available models, visit the `Hugging Face Models page <https://huggingface.co/models>`_.
 
-`models <https://huggingface.co/models>`_
+.. code-block:: html
+
+    Add model by name to your project
+
+    Usage:
+         emf-cli model add [model name] [flags]
+
+    Flags:
+        -h, --help                            help for add
+        -c, --model-class string              Python class within the module
+        -m, --model-module string             Python module used for download
+        -o, --model-options strings           List of model options
+        -p, --path string                     Downloaded Model directory path
+        -s, --skip string                     Skip the model or tokenizer download
+        -t, --tokenizer-class string          Tokenizer class (only for transformers)
+        -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
+        -y, --yes                             Automatic yes to prompts
+
+    Global Flags:
+        --config-path string             config file path (default ".")
+
+    Use "emf-cli model [command] --help" for more information about a command.
 
 Remove a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -234,8 +272,6 @@ This command aids in maintaining an organized and up-to-date model repository, f
 
 Building a project
 ----------------------------------
-
-|:construction:| WIP |:construction:|
 
 The ``emf-cli build`` command facilitates the process of building the project. It compiles the project's source code and dependencies into an executable format suitable for deployment or distribution.
 
