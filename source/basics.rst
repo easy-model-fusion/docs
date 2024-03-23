@@ -92,7 +92,7 @@ The ``emf-cli model remove`` command allows users to remove one or more models f
 
     Flags:
         -a, --all    Remove all models
-        -h, --help   help for model
+        -h, --help   help for remove
 
     Global Flags:
         --config-path string             config file path (default ".")
@@ -110,7 +110,7 @@ The ``emf-cli model update`` command allows users to update one or more models f
          emf-cli model update <model name> [<other model names>...] [flags]
 
     Flags:
-        -h, --help   help for model
+        -h, --help   help for update
 
     Global Flags:
         --config-path string             config file path (default ".")
@@ -150,7 +150,9 @@ When working with `tokenizers <https://huggingface.co/docs/transformers/main_cla
 Adding a tokenizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``emf-cli tokenizer add`` command allows users to add one or more `tokenizers <https://huggingface.co/docs/transformers/main_classes/tokenizer>`_ to their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to add as command arguments.
+.. note::
+
+    A recommended tokenizer should already be downloaded by default upon adding a model with the ``emf-cli model add`` command. Users can verify the configured models in the configuration file. If the downloaded tokenizer does not meet the user's preferences, they are welcome to add one of their choice.
 
 .. code-block:: html
 
@@ -160,7 +162,7 @@ The ``emf-cli tokenizer add`` command allows users to add one or more `tokenizer
          emf-cli tokenizer add <model name> <tokenizer name> [<other tokenizer names>...] [flags]
 
     Flags:
-        -h, --help   help for model
+        -h, --help   help for add
 
     Global Flags:
         --config-path string             config file path (default ".")
@@ -178,7 +180,7 @@ The ``emf-cli tokenizer remove`` command allows users to remove one or more `tok
          emf-cli tokenizer remove <model name> <tokenizer name> [<other tokenizer names>...] [flags]
 
     Flags:
-        -h, --help   help for model
+        -h, --help   help for remove
 
     Global Flags:
         --config-path string             config file path (default ".")
@@ -186,7 +188,11 @@ The ``emf-cli tokenizer remove`` command allows users to remove one or more `tok
 Update a tokenizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``emf-cli tokenizer update`` command allows users to update one or more `tokenizers <https://huggingface.co/docs/transformers/main_classes/tokenizer>`_ from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments. Please note that, as of today, it cannot be determined if a tokenizer can be updated. Therefore, we created this command to allow you to redownload a tokenizer if you have learned that a new version is available.
+.. warning::
+
+    It currently cannot be determined if a tokenizer can be updated. Therefore, we created this command to allow you to redownload a tokenizer if you have learned that a new version is available.
+
+The ``emf-cli tokenizer update`` command allows users to update one or more `tokenizers <https://huggingface.co/docs/transformers/main_classes/tokenizer>`_ from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments.
 
 .. code-block:: html
 
@@ -196,18 +202,84 @@ The ``emf-cli tokenizer update`` command allows users to update one or more `tok
          emf-cli tokenizer update <model name> <tokenizer name> [<other tokenizer names>...] [flags]
 
     Flags:
-        -h, --help   help for model
+        -h, --help   help for update
 
     Global Flags:
         --config-path string             config file path (default ".")
 
+Project synchronization (tidy)
+----------------------------------
+
+The ``emf-cli tidy`` command synchronizes the project's configuration file with the downloaded models. It ensures consistency between the configured models in the project's configuration file and the actual downloaded models on the device.
+
+Upon execution, the command performs the following tasks:
+
+- Removes any configured models that are not downloaded, ensuring that the configuration file accurately reflects the current state of downloaded models.
+- Offers options to either download or remove any downloaded models that are not configured in the configuration file, providing users with the flexibility to manage downloaded models as needed.
+
+This command aids in maintaining an organized and up-to-date model repository, facilitating efficient management of models within the project.
+
+.. code-block:: html
+
+    Synchronizes the configuration file with the downloaded models
+
+    Usage:
+         emf-cli tidy [flags]
+
+    Flags:
+        -h, --help   help for tidy
+
+    Global Flags:
+        --config-path string             config file path (default ".")
 
 Building a project
 ----------------------------------
 
-To create a new project, run:
+|:construction:| WIP |:construction:|
 
-Others
+The ``emf-cli build`` command facilitates the process of building the project. It compiles the project's source code and dependencies into an executable format suitable for deployment or distribution.
+
+Upon execution, the command offers various options to customize the build process:
+    - ``-c, --compress``: Compresses the output file(s) into a tarball file for easy distribution.
+    - ``-m, --include-models``: Includes models in the build compressed file, allowing for bundled distribution of models with the project.
+    - ``-n, --name string``: Allows users to specify a custom name for the executable.
+    - ``-f, --one-file``: Builds the project in one file, consolidating all dependencies and resources into a single executable file.
+    - ``-o, --out-dir string``: Specifies the destination directory where the project will be built.
+
+.. code-block:: html
+
+    Build the project.
+
+    Usage:
+         emf-cli build [flags]
+
+    Flags:
+        -c, --compress         Compress the output file(s) into a tarball file
+        -h, --help             help for build
+        -m, --include-models   Include models in the build compressed file
+        -n, --name string      Custom name for the executable
+        -f, --one-file         Build the project in one file
+        -o, --out-dir string   Destination directory where the project will be built
+
+    Global Flags:
+        --config-path string             config file path (default ".")
+
+Cleaning a project
 ----------------------------------
 
-To create a new project, run:
+The ``emf-cli clean`` command allows users to clean project files. The cleaning operation removes build files and, optionally, all downloaded models associated with the project.
+
+.. code-block:: html
+
+    Clean project files (e.g. build)
+
+    Usage:
+         emf-cli clean [flags]
+
+    Flags:
+        -a, --all    clean all project
+        -h, --help   help for clean
+        -y, --yes    bypass delete all confirmation
+
+    Global Flags:
+        --config-path string             config file path (default ".")
