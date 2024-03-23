@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[🚧 WIP 🚧] Basics &mdash; Easy Model Fusion tbd documentation</title>
+  <title>Basics &mdash; Easy Model Fusion tbd documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="[🚧 WIP 🚧] Examples" href="examples.html" />
+    <link rel="next" title="Configuration Reference" href="config-yaml.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
@@ -46,16 +46,39 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">[🚧 WIP 🚧] Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">[🚧 WIP 🚧] Basics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-your-first-project">Create your first project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-project">Creating a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-an-existing-project">Installing an existing project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-its-content">Understanding its content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-models">Working with models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-model">Adding a model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove-a-model">Remove a model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-a-model">Update a model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">[🚧 WIP 🚧] Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="emf-cli.html">[🚧 WIP 🚧] EMF Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sdk.html">[🚧 WIP 🚧] SDK</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">[🚧 WIP 🚧] Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-tokenizers">Working with tokenizers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-tokenizer">Adding a tokenizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove-a-tokenizer">Remove a tokenizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-a-tokenizer">Update a tokenizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulating-options">Manipulating options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default">Default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-options">Multiple options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strings">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#project-synchronization-tidy">Project synchronization (tidy)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-project">Building a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cleaning-a-project">Cleaning a project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config-yaml.html">Configuration Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 </ul>
 
         </div>
@@ -72,7 +95,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">[🚧 WIP 🚧] Basics</li>
+      <li class="breadcrumb-item active">Basics</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/basics.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,17 +105,346 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="construction-wip-construction-basics">
-<h1>[🚧 WIP 🚧] Basics<a class="headerlink" href="#construction-wip-construction-basics" title="Permalink to this heading"></a></h1>
-<p>Basics page.</p>
-<section id="create-your-first-project">
-<h2>Create your first project<a class="headerlink" href="#create-your-first-project" title="Permalink to this heading"></a></h2>
-<p>Type in the following command to create your first project</p>
+  <section id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this heading"></a></h1>
+<section id="creating-a-project">
+<h2>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this heading"></a></h2>
+<p>To create a new project, run :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>emf-cli<span class="w"> </span>init<span class="w"> </span>awesome-ia-app
 </pre></div>
 </div>
-<p><strong>Congratulations on creating your first project!</strong> 👏</p>
-<p>You’ve successfully taken your first step with the EMF toolkit. Now, it’s time to dive deeper and unlock the full potential of this powerful tool.</p>
+</section>
+<section id="installing-an-existing-project">
+<h2>Installing an existing project<a class="headerlink" href="#installing-an-existing-project" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">install</span></code> command sets up the development environment for an existing EMF project based on its configuration. It prepares the project for use : installing the configured models, configuring the SDK and setting up any necessary development tools.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Installs an existing EMF project. Basically combining a slightly different init and the tidy commands.
+
+Usage:
+     emf-cli install [flags]
+
+Flags:
+    -c, --cuda   Use torch with cuda
+    -h, --help   help for install
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="understanding-its-content">
+<h2>Understanding its content<a class="headerlink" href="#understanding-its-content" title="Permalink to this heading"></a></h2>
+<p>Let’s enter you project’s folder and analyze it :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>awesome-ia-app
+├──<span class="w"> </span>.venv/
+├──<span class="w"> </span>dist/
+├──<span class="w"> </span>models/
+├──<span class="w"> </span>sdk/
+├──<span class="w"> </span>config.yaml
+├──<span class="w"> </span>main.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.venv/</span></code> encapsulates all Python dependencies required by the project, ensuring a clean and isolated environment for development.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dist/</span></code> contains the distribution files of your project, which includes the executable or packaged files ready for deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models/</span></code> contains the downloaded <a class="reference external" href="https://huggingface.co/models">models</a> to be used in the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdk/</span></code> contains essential tools and resources tailored for the project’s development needs. For more details, refer to the <a class="reference internal" href="development.html"><span class="doc">Development</span></a> page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> centralizes application settings, enabling user customization for behavior and AI model selection. For more details, refer to the <a class="reference internal" href="config-yaml.html"><span class="doc">Configuration Reference</span></a> page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> is where the magic happens : it serves as the heart of your application and showcases the full capabilities of the EMF toolkit.</p></li>
+</ul>
+</section>
+<section id="working-with-models">
+<h2>Working with models<a class="headerlink" href="#working-with-models" title="Permalink to this heading"></a></h2>
+<p>When working with <a class="reference external" href="https://huggingface.co/models">models</a>, you will be using the <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span></code> command :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Palette that contains model based commands
+
+Usage:
+    emf-cli model [flags]
+    emf-cli model [command]
+
+Available Commands:
+    add         Add model by name to your project
+    remove      Remove one or more models
+    update      Update one or more models
+
+Flags:
+    -h, --help   help for model
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+
+Use &quot;emf-cli model [command] --help&quot; for more information about a command.
+</pre></div>
+</div>
+<section id="adding-a-model">
+<h3>Adding a model<a class="headerlink" href="#adding-a-model" title="Permalink to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<dl class="simple">
+<dt>Please note that we currently support the following model types:</dt><dd><ul class="simple">
+<li><p>single file models</p></li>
+<li><p><a class="reference external" href="https://huggingface.co/diffusers">diffusers</a> models</p></li>
+<li><p><a class="reference external" href="https://huggingface.co/docs/transformers/index">transformers</a> models</p></li>
+</ul>
+</dd>
+</dl>
+<p>Please ensure that the models you intend to use adhere to these specifications. Using unsupported models may lead to unexpected behavior or errors in the application.</p>
+</div>
+<div class="line-block">
+<div class="line">The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">add</span></code> command allows users to add a model to their project by specifying the model name and optional configuration flags.</div>
+<div class="line">For more information on available models, visit the <a class="reference external" href="https://huggingface.co/models">Hugging Face Models page</a>.</div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Add model by name to your project
+
+Usage:
+     emf-cli model add [model name] [flags]
+
+Flags:
+    -h, --help                            help for add
+    -c, --model-class string              Python class within the module
+    -m, --model-module string             Python module used for download
+    -o, --model-options strings           List of model options
+    -p, --path string                     Downloaded Model directory path
+    -s, --skip string                     Skip the model or tokenizer download
+    -t, --tokenizer-class string          Tokenizer class (only for transformers)
+    -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
+    -y, --yes                             Automatic yes to prompts
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+
+Use &quot;emf-cli model [command] --help&quot; for more information about a command.
+</pre></div>
+</div>
+</section>
+<section id="remove-a-model">
+<h3>Remove a model<a class="headerlink" href="#remove-a-model" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">remove</span></code> command allows users to remove one or more models from their project. Users specify the name of the model(s) they wish to remove as command arguments. Upon execution, it removes the specified models from both the project’s configuration file and the device.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Remove one or more models
+
+Usage:
+     emf-cli model remove <span class="p">&lt;</span><span class="nt">model</span> <span class="na">name</span><span class="p">&gt;</span> [<span class="p">&lt;</span><span class="nt">other</span> <span class="na">model</span> <span class="na">names</span><span class="p">&gt;</span>...] [flags]
+
+Flags:
+    -a, --all    Remove all models
+    -h, --help   help for remove
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="update-a-model">
+<h3>Update a model<a class="headerlink" href="#update-a-model" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">update</span></code> command allows users to update one or more models from their project. Users specify the name of the model(s) they wish to update as command arguments. This command will only update models sourced from <a class="reference external" href="https://huggingface.co/">Hugging Face</a> and if a newer version is available (determined through the <a class="reference external" href="https://huggingface.co/docs/hub/api">Hugging Face API</a>).</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Update one or more models
+
+Usage:
+     emf-cli model update <span class="p">&lt;</span><span class="nt">model</span> <span class="na">name</span><span class="p">&gt;</span> [<span class="p">&lt;</span><span class="nt">other</span> <span class="na">model</span> <span class="na">names</span><span class="p">&gt;</span>...] [flags]
+
+Flags:
+    -h, --help   help for update
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="working-with-tokenizers">
+<h2>Working with tokenizers<a class="headerlink" href="#working-with-tokenizers" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Tokenizer Requirements</strong></p>
+<p><a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">Tokenizers</a> are only available for models sourced from <a class="reference external" href="https://huggingface.co/docs/transformers/index">Hugging Face’s Transformers</a> library. Please ensure that you are using a compatible model type when requesting tokenizers. Using incompatible models may result in unexpected behavior or errors in your application.</p>
+</div>
+<p>When working with <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a>, you will be using the <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span></code> command :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Palette that contains tokenizer based commands
+
+Usage:
+    emf-cli tokenizer [flags]
+    emf-cli tokenizer [command]
+
+Available Commands:
+    add         Add one or more tokenizers
+    remove      Remove one or more tokenizers
+    update      Update one or more tokenizers
+
+Flags:
+    -h, --help   help for tokenizer
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+
+Use &quot;emf-cli tokenizer [command] --help&quot; for more information about a command.
+</pre></div>
+</div>
+<section id="adding-a-tokenizer">
+<h3>Adding a tokenizer<a class="headerlink" href="#adding-a-tokenizer" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A recommended tokenizer should already be downloaded by default upon adding a model with the <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">add</span></code> command. Users can verify the configured models in the configuration file. If the downloaded tokenizer does not meet the user’s preferences, they are welcome to add one of their choice.</p>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Add one or more tokenizer
+
+Usage:
+     emf-cli tokenizer add <span class="p">&lt;</span><span class="nt">model</span> <span class="na">name</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">tokenizer</span> <span class="na">name</span><span class="p">&gt;</span> [<span class="p">&lt;</span><span class="nt">other</span> <span class="na">tokenizer</span> <span class="na">names</span><span class="p">&gt;</span>...] [flags]
+
+Flags:
+    -h, --help   help for add
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="remove-a-tokenizer">
+<h3>Remove a tokenizer<a class="headerlink" href="#remove-a-tokenizer" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">remove</span></code> command allows users to remove one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to remove as command arguments.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Remove one or more tokenizer
+
+Usage:
+     emf-cli tokenizer remove <span class="p">&lt;</span><span class="nt">model</span> <span class="na">name</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">tokenizer</span> <span class="na">name</span><span class="p">&gt;</span> [<span class="p">&lt;</span><span class="nt">other</span> <span class="na">tokenizer</span> <span class="na">names</span><span class="p">&gt;</span>...] [flags]
+
+Flags:
+    -h, --help   help for remove
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="update-a-tokenizer">
+<h3>Update a tokenizer<a class="headerlink" href="#update-a-tokenizer" title="Permalink to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It currently cannot be determined if a tokenizer can be updated. Therefore, we created this command to allow you to redownload a tokenizer if you have learned that a new version is available.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">update</span></code> command allows users to update one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Update one or more tokenizer
+
+Usage:
+     emf-cli tokenizer update <span class="p">&lt;</span><span class="nt">model</span> <span class="na">name</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">tokenizer</span> <span class="na">name</span><span class="p">&gt;</span> [<span class="p">&lt;</span><span class="nt">other</span> <span class="na">tokenizer</span> <span class="na">names</span><span class="p">&gt;</span>...] [flags]
+
+Flags:
+    -h, --help   help for update
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulating-options">
+<h2>Manipulating options<a class="headerlink" href="#manipulating-options" title="Permalink to this heading"></a></h2>
+<p>When specifying options with <code class="docutils literal notranslate"><span class="pre">--model-options</span></code> or <code class="docutils literal notranslate"><span class="pre">--tokenizer-options</span></code>, things might be a bit tricky so let’s go through the different formats and examples to ensure clarity and accuracy.</p>
+<section id="default">
+<h3>Default<a class="headerlink" href="#default" title="Permalink to this heading"></a></h3>
+<p>When working with default values, you just have to use the following format :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>--model-options key=module.value
+--model-options key=True
+--model-options key=123456789
+</pre></div>
+</div>
+</section>
+<section id="multiple-options">
+<h3>Multiple options<a class="headerlink" href="#multiple-options" title="Permalink to this heading"></a></h3>
+<p>You could simply specify the flag as many times as needed :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>--model-options key1=value1 --model-options key2=value2 --model-options key3=value3
+</pre></div>
+</div>
+<p>Or you could put them side by side and encapsulate them into double quotes :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>--model-options &quot;key1=value1 key2=value2 key3=value3&quot;
+</pre></div>
+</div>
+</section>
+<section id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this heading"></a></h3>
+<p>In shell scripting or command-line interfaces, quoting strings is crucial to prevent interpretation or expansion by the shell. Without quoting, certain characters or sequences might be treated specially, leading to unintended behavior :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>--model-options &quot;key=&#39;value&#39;&quot;
+--model-options key=&quot;&#39;value&#39;&quot;
+</pre></div>
+</div>
+<p>Now here is how it looks like when combining with multiple options :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>--model-options &quot;key1=&#39;value1&#39; key2=&#39;value2&#39; key3=&#39;value3&#39;&quot;
+--model-options key=&quot;&#39;value&#39;&quot;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="project-synchronization-tidy">
+<h2>Project synchronization (tidy)<a class="headerlink" href="#project-synchronization-tidy" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please be aware that it is currently not possible to retrieve the version or the options used while handling downloaded but not configured models.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tidy</span></code> command synchronizes the project’s configuration file with the downloaded models. It ensures consistency between the configured models in the project’s configuration file and the actual downloaded models on the device.</p>
+<p>Upon execution, the command performs the following tasks:</p>
+<ul class="simple">
+<li><p>Removes any configured models that are not downloaded, ensuring that the configuration file accurately reflects the current state of downloaded models.</p></li>
+<li><p>Offers options to either download or remove any downloaded models that are not configured in the configuration file, providing users with the flexibility to manage downloaded models as needed.</p></li>
+</ul>
+<p>This command aids in maintaining an organized and up-to-date model repository, facilitating efficient management of models within the project.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Synchronizes the configuration file with the downloaded models
+
+Usage:
+     emf-cli tidy [flags]
+
+Flags:
+    -h, --help   help for tidy
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="building-a-project">
+<h2>Building a project<a class="headerlink" href="#building-a-project" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">build</span></code> command facilitates the process of building the project. It compiles the project’s source code and dependencies into an executable format suitable for deployment or distribution.</p>
+<dl class="simple">
+<dt>Upon execution, the command offers various options to customize the build process:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--compress</span></code>: Compresses the output file(s) into a tarball file for easy distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-m,</span> <span class="pre">--include-models</span></code>: Includes models in the build compressed file, allowing for bundled distribution of models with the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-n,</span> <span class="pre">--name</span> <span class="pre">string</span></code>: Allows users to specify a custom name for the executable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--one-file</span></code>: Builds the project in one file, consolidating all dependencies and resources into a single executable file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">--out-dir</span> <span class="pre">string</span></code>: Specifies the destination directory where the project will be built.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Build the project.
+
+Usage:
+     emf-cli build [flags]
+
+Flags:
+    -c, --compress         Compress the output file(s) into a tarball file
+    -h, --help             help for build
+    -m, --include-models   Include models in the build compressed file
+    -n, --name string      Custom name for the executable
+    -f, --one-file         Build the project in one file
+    -o, --out-dir string   Destination directory where the project will be built
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
+</section>
+<section id="cleaning-a-project">
+<h2>Cleaning a project<a class="headerlink" href="#cleaning-a-project" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">clean</span></code> command allows users to clean project files. The cleaning operation removes build files and, optionally, all downloaded models associated with the project.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Clean project files (e.g. build)
+
+Usage:
+     emf-cli clean [flags]
+
+Flags:
+    -a, --all    clean all project
+    -h, --help   help for clean
+    -y, --yes    bypass delete all confirmation
+
+Global Flags:
+    --config-path string             config file path (default &quot;.&quot;)
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -101,13 +453,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="examples.html" class="btn btn-neutral float-right" title="[🚧 WIP 🚧] Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="config-yaml.html" class="btn btn-neutral float-right" title="Configuration Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, tbd.</p>
+    <p>&#169; Copyright 2024, Easy Model Fusion.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration Reference &mdash; Easy Model Fusion tbd documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=baf1fd61"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="Basics" href="basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Easy Model Fusion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#application-information">Application Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sdk-configuration">SDK Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration">Model Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Easy Model Fusion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuration Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/config-yaml.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration-reference">
+<h1>Configuration Reference<a class="headerlink" href="#configuration-reference" title="Permalink to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file serves as a centralized configuration hub for the application, allowing users to specify various parameters and settings tailored to their requirements. It facilitates customization of the application’s behavior, including the selection and configuration of AI models. Users can modify the configuration file to adapt the application to different environments and use cases, enhancing flexibility and versatility.</p>
+<section id="application-information">
+<h2>Application Information<a class="headerlink" href="#application-information" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>name</strong>: The name of the application.</p></li>
+<li><p><strong>version</strong>: The version of the application.</p></li>
+<li><p><strong>description</strong>: A brief description of the application.</p></li>
+</ul>
+</section>
+<section id="sdk-configuration">
+<h2>SDK Configuration<a class="headerlink" href="#sdk-configuration" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>sdk-tag</strong>: The version of the SDK to download.</p></li>
+</ul>
+</section>
+<section id="model-configuration">
+<h2>Model Configuration<a class="headerlink" href="#model-configuration" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When manipulating configured models, please refer to the <a class="reference internal" href="basics.html"><span class="doc">Basics</span></a> page for detailed instructions and best practices.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">models</span></code> section allows users to specify AI models to be used in the application. Each model configuration includes the following parameters:</p>
+<ul>
+<li><p><strong>name</strong>: The name of the model.</p></li>
+<li><p><strong>path</strong>: The path of the directory that will contain the model.</p></li>
+<li><p><strong>module</strong>: The Python module used for downloading the model.</p></li>
+<li><p><strong>class</strong>: The Python class within the module.</p></li>
+<li><p><strong>options</strong>: A map of additional options for configuring the model.</p></li>
+<li><p><strong>tokenizers</strong>: List of tokenizer configurations.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>path</strong>: The path of the directory that will contain the tokenizer.</p></li>
+<li><p><strong>class</strong>: The Python class used for downloading the tokenizer.</p></li>
+<li><p><strong>options</strong>: A map of additional options for configuring the tokenizer.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>pipelinetag</strong>: The pipeline tag used by the model identifies the specific task or functionality supported by the model (e.g., text-to-image, text-generation).</p></li>
+<li><p><strong>source</strong>: The source of the model (e.g., hugging_face).</p></li>
+<li><p><strong>addtobinaryfile</strong>: Indicates if the model should be added to the executable.</p></li>
+<li><p><strong>isdownloaded</strong>: Indicates if the model has been downloaded.</p></li>
+<li><p><strong>version</strong>: The version of the model.</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Application information</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;awesome-ia-app&quot;</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Description</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">awesome</span><span class="nv"> </span><span class="s">IA</span><span class="nv"> </span><span class="s">application.&quot;</span>
+
+<span class="c1"># SDK Configuration</span>
+<span class="nt">sdk-tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.Y.Z&quot;</span>
+
+<span class="c1"># Model Configuration</span>
+<span class="nt">models</span><span class="p">:</span>
+
+<span class="w">    </span><span class="c1"># Diffusers model</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stabilityai/sdxl-turbo</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">models/stabilityai/sdxl-turbo</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">module</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diffusers</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">class</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StableDiffusionXLPipeline</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+<span class="w">            </span><span class="nt">torch_dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torch.float16</span>
+<span class="w">      </span><span class="w w-Error">  </span><span class="nt">tokenizers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="nt">pipelinetag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text-to-image</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hugging_face</span>
+<span class="w">        </span><span class="nt">addtobinaryfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">isdownloaded</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023-12-07T18:04:49.000Z&quot;</span>
+
+<span class="w">    </span><span class="c1"># Transformers model</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/phi-2</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">models/microsoft/phi-2/model</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">module</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformers</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">class</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhiModel</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+<span class="w">            </span><span class="nt">torch_dtype</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;auto&quot;&#39;</span>
+<span class="w">      </span><span class="w w-Error">  </span><span class="nt">tokenizers</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">models\microsoft\phi-2\AutoTokenizer</span>
+<span class="w">                </span><span class="l l-Scalar l-Scalar-Plain">class</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoTokenizer</span>
+<span class="w">                </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+<span class="w">                    </span><span class="nt">do_lower_case</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;True&quot;</span>
+<span class="w">                    </span><span class="nt">max_len</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;128&quot;</span>
+<span class="w">        </span><span class="nt">pipelinetag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text-generation</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hugging_face</span>
+<span class="w">        </span><span class="nt">addtobinaryfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">isdownloaded</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-02-06T12:36:24.000Z&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basics.html" class="btn btn-neutral float-left" title="Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Easy Model Fusion.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

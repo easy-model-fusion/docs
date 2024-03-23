@@ -30,7 +30,7 @@ Install using Go
 Install it directly using the following command
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-.. |:construction:| This might not work since the repository is still private |:construction:|
+|:construction:| This might not work since the repository is still private |:construction:|
 
 .. code-block:: shell
 
