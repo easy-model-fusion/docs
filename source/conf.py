@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Easy Model Fusion'
-copyright = '2024, tbd'
-author = 'tbd'
+copyright = '2024, Easy Model Fusion'
+author = 'Easy Model Fusion'
 release = 'tbd'
 
 # -- General configuration ---------------------------------------------------

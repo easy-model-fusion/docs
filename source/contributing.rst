@@ -1,5 +1,5 @@
 =======================================================
-[|:construction:| WIP |:construction:|] Contributing
+Contributing
 =======================================================
 
-Contributing documentation page.
+|:construction:| WIP |:construction:|

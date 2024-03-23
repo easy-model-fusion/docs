@@ -18,7 +18,7 @@ environments and deploy applications across various platforms with ease |:chart_
    overview.rst
    installation.rst
    basics.rst
+   config-yaml.rst
+   development.rst
    examples.rst
-   emf-cli.rst
-   sdk.rst
    contributing.rst
