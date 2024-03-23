@@ -38,11 +38,11 @@ The ``models`` section allows users to specify AI models to be used in the appli
     - **options**: A map of additional options for configuring the tokenizer.
 - **pipelinetag**: The pipeline tag used by the model identifies the specific task or functionality supported by the model (e.g., text-to-image, text-generation).
 - **source**: The source of the model (e.g., hugging_face).
-- **addtobinaryfile**: Indicates if the model should be added to the executable (true by default).
-- **isdownloaded**: Indicates if the model has been downloaded (true by default).
+- **addtobinaryfile**: Indicates if the model should be added to the executable.
+- **isdownloaded**: Indicates if the model has been downloaded.
 - **version**: The version of the model.
 
-Example Configuration
+Example
 -----------------------------------
 
 .. code-block:: yaml
