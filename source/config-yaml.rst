@@ -30,12 +30,12 @@ The ``models`` section allows users to specify AI models to be used in the appli
 - **path**: The path of the directory that will contain the model.
 - **module**: The Python module used for downloading the model.
 - **class**: The Python class within the module.
-- **options**: List of model options.
+- **options**: A map of additional options for configuring the model.
 - **tokenizers**: List of tokenizer configurations.
 
     - **path**: The path of the directory that will contain the tokenizer.
     - **class**: The Python class used for downloading the tokenizer.
-    - **options**: List of tokenizer options.
+    - **options**: A map of additional options for configuring the tokenizer.
 - **pipelinetag**: The pipeline tag used by the model identifies the specific task or functionality supported by the model (e.g., text-to-image, text-generation).
 - **source**: The source of the model (e.g., hugging_face).
 - **addtobinaryfile**: Indicates if the model should be added to the executable (true by default).
@@ -63,7 +63,8 @@ Example Configuration
             path: models/stabilityai/sdxl-turbo
             module: diffusers
             class: StableDiffusionXLPipeline
-            options: {}
+            options:
+                torch_dtype: torch.float16
             tokenizers: []
             pipelinetag: text-to-image
             source: hugging_face
@@ -76,11 +77,14 @@ Example Configuration
             path: models/microsoft/phi-2/model
             module: transformers
             class: PhiModel
-            options: {}
+            options:
+                torch_dtype: '"auto"'
             tokenizers:
                 - path: models\microsoft\phi-2\AutoTokenizer
                     class: AutoTokenizer
-                    options: {}
+                    options:
+                        do_lower_case: "True"
+                        max_len: "128"
             pipelinetag: text-generation
             source: hugging_face
             addtobinaryfile: true
