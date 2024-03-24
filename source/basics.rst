@@ -197,10 +197,12 @@ Adding a tokenizer
     Add one or more tokenizer
 
     Usage:
-         emf-cli tokenizer add <model name> <tokenizer name> [<other tokenizer names>...] [flags]
+         emf-cli tokenizer add <model name> <tokenizer name> [flags]
 
     Flags:
-        -h, --help   help for add
+        -c, --class string          Tokenizer class
+        -h, --help                  help for add
+        -o, --options stringArray   List of tokenizer options
 
     Global Flags:
         --config-path string             config file path (default ".")
