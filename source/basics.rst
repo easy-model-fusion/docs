@@ -33,11 +33,11 @@ The ``emf-cli install`` command sets up the development environment for an exist
 Understanding its content
 --------------------------------------
 
-Let's enter you project's folder and analyze it :
+Let's enter your project's folder and analyze it :
 
 .. code-block:: shell
 
-    awesome-ia-app
+    awesome-ia-app/
     ├── .venv/
     ├── dist/
     ├── models/
