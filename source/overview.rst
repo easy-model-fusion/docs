@@ -7,7 +7,7 @@ In the fast-paced world of AI development, where innovation is the key to stayin
 Automated Model Management
 ----------------------------------------
 
-One of EMF's standout features is its ability to automate model management. Gone are the days of manually downloading and installing AI models from disparate sources. EMF streamlines the entire process, seamlessly fetching the selected models from trusted repositories like the `Hugging Face Hub <https://huggingface.co/>`_ and ensuring they are correctly installed and ready for use. This automation not only saves time but also reduces the likelihood of errors, allowing developers to focus on building innovative AI applications without the hassle of manual model management.
+One of EMF's standout features is its ability to automate model management. Gone are the days of manually downloading and installing AI models from disparate sources. EMF streamlines the entire process, seamlessly fetching the selected models from the `Hugging Face Hub <https://huggingface.co/>`_ and ensuring they are correctly installed and ready for use. This automation not only saves time but also reduces the likelihood of errors, allowing developers to focus on building innovative AI applications without the hassle of manual model management.
 
 Seamless Integration
 ----------------------------------------
