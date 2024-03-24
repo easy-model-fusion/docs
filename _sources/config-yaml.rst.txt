@@ -80,7 +80,7 @@ Example
             options:
                 torch_dtype: '"auto"'
             tokenizers:
-                - path: models\microsoft\phi-2\AutoTokenizer
+                - path: models/microsoft/phi-2/AutoTokenizer
                     class: AutoTokenizer
                     options:
                         do_lower_case: "True"
@@ -90,3 +90,6 @@ Example
             addtobinaryfile: true
             isdownloaded: true
             version: "2024-02-06T12:36:24.000Z"
+
+        # Single file model
+        # TODO

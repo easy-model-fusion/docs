@@ -188,19 +188,23 @@ When working with `tokenizers <https://huggingface.co/docs/transformers/main_cla
 Adding a tokenizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+|:construction:| WIP |:construction:|
+
 .. note::
 
     A recommended tokenizer should already be downloaded by default upon adding a model with the ``emf-cli model add`` command. Users can verify the configured models in the configuration file. If the downloaded tokenizer does not meet the user's preferences, they are welcome to add one of their choice.
 
 .. code-block:: html
 
-    Add one or more tokenizer
+    Add tokenizer by class to your model
 
     Usage:
-         emf-cli tokenizer add <model name> <tokenizer name> [<other tokenizer names>...] [flags]
+         emf-cli tokenizer add <model name> <tokenizer name> [flags]
 
     Flags:
-        -h, --help   help for add
+        -c, --class string          Tokenizer class
+        -h, --help                  help for add
+        -o, --options stringArray   List of tokenizer options
 
     Global Flags:
         --config-path string             config file path (default ".")
