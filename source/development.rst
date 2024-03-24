@@ -48,14 +48,71 @@ Setting up the file
 
     import sdk
 
-Model manager : With vs. Without
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using a model class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Utilizing the model manager component of the SDK offers several advantages over manually managing models:
+Using the model manager
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The **ModelsManagement** class serves as the central control hub for managing all instantiated models within the application. It provides several advantages over manually managing models :
 
 - **Simplified model management** : it provides a centralized interface to manage all instantiated models. Without it, developers would need to handle model loading, unloading and prompt generation manually, leading to more complex and error-prone code.
 - **Improved resource management** : it ensures efficient use of system resources by handling the loading and unloading of models as needed. This helps prevent memory leaks and ensures optimal performance of your application.
 - **Enhanced productivity** : By abstracting away low-level model management tasks, it allows developers to focus on building innovative AI applications rather than dealing with infrastructure concerns.
+
+To instantiate it, use the following :
+
+.. code-block:: shell
+
+    model_management = ModelsManagement()
+
+Adding a new model to the management system
+========================================================
+
+By adding models to the manager, developers can centrally manage all instantiated models within the application. This helps maintain consistency and simplifies the overall model management process.
+
+.. code-block:: shell
+
+    model_management.add_model(model_class)
+
+Loading a model specified onto a device
+========================================================
+
+This function is responsible for loading a specified model onto a device (i.e., CPU or GPU). It allows developers to select a specific model from the pool of available models and load it into memory. This is essential for applications that require the use of multiple models, as it allows developers to dynamically switch between models based on user input or other factors.
+
+.. warning::
+
+    Developers should ensure that the specified device is compatible with the model being loaded. For example, if a model requires GPU acceleration but the specified device is a CPU, the loading process may fail.
+
+.. note::
+
+    Loading large models or multiple models simultaneously can consume significant system resources, such as memory and processing power. Developers should be mindful of resource usage and optimize the loading process accordingly.
+
+.. code-block:: shell
+
+    model_management.load_model(model_name)
+
+Unloading the currently loaded model from the device
+========================================================
+
+This function is responsible for unloading the currently loaded model from the device. This function allows developers to free up memory and system resources by unloading models that are no longer needed or in use by the application.
+
+.. code-block:: shell
+
+    model_management.unload_model()
+
+Generates a prompt using the currently loaded model
+========================================================
+
+This function is responsible for generating prompts using the currently loaded model. This function allows developers to interact with the loaded model and generate prompts based on specific input or user queries.
+
+.. note::
+
+    If the chosen model has yet to be loaded, it will first unload the current model (if any), load the model and then generate the prompt.
+
+.. code-block:: shell
+
+    model_management.generate_prompt(prompt, model_name=model_name, **kwargs)
 
 Upgrading the SDK
 ----------------------------------
