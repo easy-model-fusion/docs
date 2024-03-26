@@ -116,6 +116,12 @@ Adding a model
 
     Use "emf-cli model [command] --help" for more information about a command.
 
+You don't know which model to add? Take a look at the `Hugging Face Models page <https://huggingface.co/models>`_ or type in the following command and we will guide you through it !
+
+.. code-block:: shell
+
+    emf-cli model add
+
 Remove a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
