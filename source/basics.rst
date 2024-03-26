@@ -9,7 +9,7 @@ To create a new project, run :
 
 .. code-block:: shell
 
-   emf-cli init awesome-ia-app
+   emf-cli init <project-name>
 
 Installing an existing project
 --------------------------------------
