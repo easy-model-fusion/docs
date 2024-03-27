@@ -9,7 +9,7 @@ To create a new project, run :
 
 .. code-block:: shell
 
-   emf-cli init awesome-ia-app
+   emf-cli init <project-name>
 
 Installing an existing project
 --------------------------------------
@@ -33,11 +33,11 @@ The ``emf-cli install`` command sets up the development environment for an exist
 Understanding its content
 --------------------------------------
 
-Let's enter you project's folder and analyze it :
+Let's enter your project's folder and analyze it :
 
 .. code-block:: shell
 
-    awesome-ia-app
+    awesome-ia-app/
     ├── .venv/
     ├── dist/
     ├── models/
@@ -115,6 +115,12 @@ Adding a model
         --config-path string             config file path (default ".")
 
     Use "emf-cli model [command] --help" for more information about a command.
+
+You don't know which model to add? Take a look at the `Hugging Face Models page <https://huggingface.co/models>`_ or type in the following command and we will guide you through it !
+
+.. code-block:: shell
+
+    emf-cli model add
 
 Remove a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

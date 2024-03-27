@@ -110,7 +110,7 @@
 <section id="creating-a-project">
 <h2>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this heading"></a></h2>
 <p>To create a new project, run :</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>emf-cli<span class="w"> </span>init<span class="w"> </span>awesome-ia-app
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>emf-cli<span class="w"> </span>init<span class="w"> </span>&lt;project-name&gt;
 </pre></div>
 </div>
 </section>
@@ -133,8 +133,8 @@ Global Flags:
 </section>
 <section id="understanding-its-content">
 <h2>Understanding its content<a class="headerlink" href="#understanding-its-content" title="Permalink to this heading"></a></h2>
-<p>Let’s enter you project’s folder and analyze it :</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>awesome-ia-app
+<p>Let’s enter your project’s folder and analyze it :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>awesome-ia-app/
 ├──<span class="w"> </span>.venv/
 ├──<span class="w"> </span>dist/
 ├──<span class="w"> </span>models/
@@ -213,6 +213,10 @@ Global Flags:
     --config-path string             config file path (default &quot;.&quot;)
 
 Use &quot;emf-cli model [command] --help&quot; for more information about a command.
+</pre></div>
+</div>
+<p>You don’t know which model to add? Take a look at the <a class="reference external" href="https://huggingface.co/models">Hugging Face Models page</a> or type in the following command and we will guide you through it !</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>emf-cli<span class="w"> </span>model<span class="w"> </span>add
 </pre></div>
 </div>
 </section>
