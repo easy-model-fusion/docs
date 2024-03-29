@@ -11,6 +11,10 @@ the development process for artificial intelligence (AI) applications |:robot:|.
 This toolkit empowers developers to seamlessly manage AI models, configure development
 environments and deploy applications across various platforms with ease |:chart_with_upwards_trend:|.
 
+.. image:: img/lifecycle.png
+  :width: 1600
+  :alt: EMF Project Lifecycle
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
