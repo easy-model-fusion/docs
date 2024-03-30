@@ -16,13 +16,26 @@ environments and deploy applications across various platforms with ease |:chart_
   :alt: EMF Project Lifecycle
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Getting Started
 
    overview.rst
    installation.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+
    basics.rst
    config-yaml.rst
    development.rst
    examples.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Community
+
+   conduct.rst
    contributing.rst
+   licenses.rst
+   contact.rst
