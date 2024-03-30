@@ -25,4 +25,7 @@ environments and deploy applications across various platforms with ease |:chart_
    config-yaml.rst
    development.rst
    examples.rst
+   conduct.rst
    contributing.rst
+   licenses.rst
+   contact.rst
