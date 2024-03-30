@@ -9,4 +9,4 @@ Easy Model Fusion is committed to providing a welcoming and inclusive environmen
 
 If you encounter any behavior that violates this code of conduct, please :doc:`reach out to us <contact>` immediately. We are committed to addressing and resolving any issues promptly and fairly. We appreciate your cooperation in creating a positive and inclusive community for everyone.
 
-If you have any questions or concerns regarding the code of conduct, please don't hesitate to reach out to us.
+If you have any questions or need further assistance, feel free to :doc:`reach out to us <contact>`.
