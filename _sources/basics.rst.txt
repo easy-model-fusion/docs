@@ -338,11 +338,11 @@ Building a project
 The ``emf-cli build`` command facilitates the process of building the project. It compiles the project's source code and dependencies into an executable format suitable for deployment or distribution.
 
 Upon execution, the command offers various options to customize the build process:
-    - ``-c, --compress``: Compresses the output file(s) into a tarball file for easy distribution.
-    - ``-m, --include-models``: Includes models in the build compressed file, allowing for bundled distribution of models with the project.
+    - ``-l, --library string``: Specifies the library to use for building the project. Users can select between "pyinstaller" and "nuitka". The default is "pyinstaller".
+    - ``-s, --models-symlink``: Creates a symlink for the models directory in the build directory.
     - ``-n, --name string``: Allows users to specify a custom name for the executable.
     - ``-f, --one-file``: Builds the project in one file, consolidating all dependencies and resources into a single executable file.
-    - ``-o, --out-dir string``: Specifies the destination directory where the project will be built.
+    - ``-o, --out-dir string``: Specifies the destination directory where the project will be built. The default is "dist".
 
 .. code-block:: html
 
@@ -352,12 +352,12 @@ Upon execution, the command offers various options to customize the build proces
          emf-cli build [flags]
 
     Flags:
-        -c, --compress         Compress the output file(s) into a tarball file
         -h, --help             help for build
-        -m, --include-models   Include models in the build compressed file
+        -l, --library string   Library to use for building the project (select between pyinstaller and nuitka) (default "pyinstaller")
+        -s, --models-symlink   Symlink the models directory to the build directory
         -n, --name string      Custom name for the executable
         -f, --one-file         Build the project in one file
-        -o, --out-dir string   Destination directory where the project will be built
+        -o, --out-dir string   Destination directory where the project will be built (default "dist")
 
     Global Flags:
         --config-path string             config file path (default ".")

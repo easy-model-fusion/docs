@@ -417,11 +417,11 @@ Global Flags:
 <p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">build</span></code> command facilitates the process of building the project. It compiles the project’s source code and dependencies into an executable format suitable for deployment or distribution.</p>
 <dl class="simple">
 <dt>Upon execution, the command offers various options to customize the build process:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--compress</span></code>: Compresses the output file(s) into a tarball file for easy distribution.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-m,</span> <span class="pre">--include-models</span></code>: Includes models in the build compressed file, allowing for bundled distribution of models with the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-l,</span> <span class="pre">--library</span> <span class="pre">string</span></code>: Specifies the library to use for building the project. Users can select between “pyinstaller” and “nuitka”. The default is “pyinstaller”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--models-symlink</span></code>: Creates a symlink for the models directory in the build directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-n,</span> <span class="pre">--name</span> <span class="pre">string</span></code>: Allows users to specify a custom name for the executable.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--one-file</span></code>: Builds the project in one file, consolidating all dependencies and resources into a single executable file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">--out-dir</span> <span class="pre">string</span></code>: Specifies the destination directory where the project will be built.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">--out-dir</span> <span class="pre">string</span></code>: Specifies the destination directory where the project will be built. The default is “dist”.</p></li>
 </ul>
 </dd>
 </dl>
@@ -431,12 +431,12 @@ Usage:
      emf-cli build [flags]
 
 Flags:
-    -c, --compress         Compress the output file(s) into a tarball file
     -h, --help             help for build
-    -m, --include-models   Include models in the build compressed file
+    -l, --library string   Library to use for building the project (select between pyinstaller and nuitka) (default &quot;pyinstaller&quot;)
+    -s, --models-symlink   Symlink the models directory to the build directory
     -n, --name string      Custom name for the executable
     -f, --one-file         Build the project in one file
-    -o, --out-dir string   Destination directory where the project will be built
+    -o, --out-dir string   Destination directory where the project will be built (default &quot;dist&quot;)
 
 Global Flags:
     --config-path string             config file path (default &quot;.&quot;)
