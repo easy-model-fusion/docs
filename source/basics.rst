@@ -21,14 +21,15 @@ The ``emf-cli install`` command sets up the development environment for an exist
     Installs an existing EMF project. Basically combining a slightly different init and the tidy commands.
 
     Usage:
-         emf-cli install [flags]
+      emf-cli install [flags]
 
     Flags:
-        -c, --cuda   Use torch with cuda
-        -h, --help   help for install
+      -a, --access-token string   Access token for gated models
+      -c, --cuda                  Use torch with cuda
+      -h, --help                  help for install
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Understanding its content
 --------------------------------------
@@ -329,13 +330,15 @@ This command aids in maintaining an organized and up-to-date model repository, f
     Synchronizes the configuration file with the downloaded models
 
     Usage:
-         emf-cli tidy [flags]
+      emf-cli tidy [flags]
 
     Flags:
-        -h, --help   help for tidy
+      -a, --access-token string   Access token for gated models
+      -h, --help                  help for tidy
+      -y, --yes                   Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Building a project
 ----------------------------------
