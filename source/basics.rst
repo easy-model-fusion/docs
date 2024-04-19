@@ -21,14 +21,15 @@ The ``emf-cli install`` command sets up the development environment for an exist
     Installs an existing EMF project. Basically combining a slightly different init and the tidy commands.
 
     Usage:
-         emf-cli install [flags]
+      emf-cli install [flags]
 
     Flags:
-        -c, --cuda   Use torch with cuda
-        -h, --help   help for install
+      -a, --access-token string   Access token for gated models
+      -c, --cuda                  Use torch with cuda
+      -h, --help                  help for install
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Understanding its content
 --------------------------------------
@@ -98,21 +99,24 @@ Adding a model
     Add model by name to your project
 
     Usage:
-         emf-cli model add [model name] [flags]
+      emf-cli model add [model name] [flags]
 
     Flags:
-        -h, --help                            help for add
-        -c, --model-class string              Python class within the module
-        -m, --model-module string             Python module used for download
-        -o, --model-options strings           List of model options
-        -p, --path string                     Downloaded Model directory path
-        -s, --skip string                     Skip the model or tokenizer download
-        -t, --tokenizer-class string          Tokenizer class (only for transformers)
-        -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
-        -y, --yes                             Automatic yes to prompts
+      -a, --access-token string             Access token for gated models
+      -h, --help                            help for add
+      -c, --model-class string              Python class within the module
+      -m, --model-module string             Python module used for download
+      -o, --model-options strings           List of model options
+      -O, --only-configuration              Only configure the model without downloading it
+      -p, --path string                     Downloaded Model directory path
+      -S, --single-file                     Use the model as a single file, (usually its a safetensors file)
+      -s, --skip-tokenizer                  Skip tokenizer download
+      -t, --tokenizer-class string          Tokenizer class (only for transformers)
+      -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
+      -y, --yes                             Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string                  config file path (default ".")``
 
     Use "emf-cli model [command] --help" for more information about a command.
 
@@ -151,13 +155,15 @@ The ``emf-cli model update`` command allows users to update one or more models f
     Update one or more models
 
     Usage:
-         emf-cli model update <model name> [<other model names>...] [flags]
+      emf-cli model update <model name> [<other model names>...] [flags]
 
     Flags:
-        -h, --help   help for update
+      -a, --access-token string   Access token for gated models
+      -h, --help                  help for update
+      -y, --yes                   Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Working with tokenizers
 ----------------------------------
@@ -324,13 +330,15 @@ This command aids in maintaining an organized and up-to-date model repository, f
     Synchronizes the configuration file with the downloaded models
 
     Usage:
-         emf-cli tidy [flags]
+      emf-cli tidy [flags]
 
     Flags:
-        -h, --help   help for tidy
+      -a, --access-token string   Access token for gated models
+      -h, --help                  help for tidy
+      -y, --yes                   Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Building a project
 ----------------------------------
