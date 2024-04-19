@@ -98,21 +98,24 @@ Adding a model
     Add model by name to your project
 
     Usage:
-         emf-cli model add [model name] [flags]
+      emf-cli model add [model name] [flags]
 
     Flags:
-        -h, --help                            help for add
-        -c, --model-class string              Python class within the module
-        -m, --model-module string             Python module used for download
-        -o, --model-options strings           List of model options
-        -p, --path string                     Downloaded Model directory path
-        -s, --skip string                     Skip the model or tokenizer download
-        -t, --tokenizer-class string          Tokenizer class (only for transformers)
-        -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
-        -y, --yes                             Automatic yes to prompts
+      -a, --access-token string             Access token for gated models
+      -h, --help                            help for add
+      -c, --model-class string              Python class within the module
+      -m, --model-module string             Python module used for download
+      -o, --model-options strings           List of model options
+      -O, --only-configuration              Only configure the model without downloading it
+      -p, --path string                     Downloaded Model directory path
+      -S, --single-file                     Use the model as a single file, (usually its a safetensors file)
+      -s, --skip-tokenizer                  Skip tokenizer download
+      -t, --tokenizer-class string          Tokenizer class (only for transformers)
+      -T, --tokenizer-options stringArray   List of tokenizer options (only for transformers)
+      -y, --yes                             Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string                  config file path (default ".")``
 
     Use "emf-cli model [command] --help" for more information about a command.
 
@@ -151,13 +154,15 @@ The ``emf-cli model update`` command allows users to update one or more models f
     Update one or more models
 
     Usage:
-         emf-cli model update <model name> [<other model names>...] [flags]
+      emf-cli model update <model name> [<other model names>...] [flags]
 
     Flags:
-        -h, --help   help for update
+      -a, --access-token string   Access token for gated models
+      -h, --help                  help for update
+      -y, --yes                   Automatic yes to prompts
 
     Global Flags:
-        --config-path string             config file path (default ".")
+      --config-path string        config file path (default ".")
 
 Working with tokenizers
 ----------------------------------
