@@ -37,7 +37,7 @@ The ``models`` section allows users to specify AI models to be used in the appli
     - **class**: The Python class used for downloading the tokenizer.
     - **options**: A map of additional options for configuring the tokenizer.
 - **pipelinetag**: The pipeline tag used by the model identifies the specific task or functionality supported by the model (e.g., text-to-image, text-generation).
-- **source**: The source of the model (e.g., hugging_face).
+- **source**: The source of the model (e.g., hugging_face). In the case of a single file model, use `custom` source.
 - **addtobinaryfile**: Indicates if the model should be added to the executable.
 - **isdownloaded**: Indicates if the model has been downloaded.
 - **version**: The version of the model.
