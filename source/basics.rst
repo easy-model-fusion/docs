@@ -185,9 +185,9 @@ When working with `tokenizers <https://huggingface.co/docs/transformers/main_cla
         emf-cli tokenizer [command]
 
     Available Commands:
-        add         Add one or more tokenizers
-        remove      Remove one or more tokenizers
-        update      Update one or more tokenizers
+        add         Add one or more tokenizers from a specific model
+        remove      Remove one or more tokenizers from a specific model
+        update      Update one or more tokenizers from a specific model
 
     Flags:
         -h, --help   help for tokenizer
