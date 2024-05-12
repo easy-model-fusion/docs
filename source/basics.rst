@@ -126,6 +126,15 @@ You don't know which model to add? Take a look at the `Hugging Face Models page 
 
     emf-cli model add
 
+.. code-block:: html
+
+You can also add a model using an existing single .safetensors file, using the `--single-file` flag.
+Some other flags will be asked like the --model-class, the --path and more.
+
+.. code-block:: shell
+
+   emf-cli model add --single-file
+
 Remove a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
