@@ -133,7 +133,7 @@
 </div></blockquote>
 </li>
 <li><p><strong>pipelinetag</strong>: The pipeline tag used by the model identifies the specific task or functionality supported by the model (e.g., text-to-image, text-generation).</p></li>
-<li><p><strong>source</strong>: The source of the model (e.g., hugging_face).</p></li>
+<li><p><strong>source</strong>: The source of the model (e.g., hugging_face). In the case of a single file model, use <cite>custom</cite> source.</p></li>
 <li><p><strong>addtobinaryfile</strong>: Indicates if the model should be added to the executable.</p></li>
 <li><p><strong>isdownloaded</strong>: Indicates if the model has been downloaded.</p></li>
 <li><p><strong>version</strong>: The version of the model.</p></li>
@@ -186,7 +186,18 @@
 <span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-02-06T12:36:24.000Z&quot;</span>
 
 <span class="w">    </span><span class="c1"># Single file model</span>
-<span class="w">    </span><span class="c1"># TODO</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stabilityai/sdxl-turbo</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">models/sdxl-turbo.safetensors</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">module</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diffusers</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">class</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StableDiffusionXLPipeline</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+<span class="w">            </span><span class="nt">torch_dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torch.float16</span>
+<span class="w">      </span><span class="w w-Error">  </span><span class="nt">tokenizers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="nt">pipelinetag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text-to-image</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
+<span class="w">        </span><span class="nt">addtobinaryfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">isdownloaded</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023-12-07T18:04:49.000Z&quot;</span>
 </pre></div>
 </div>
 </section>
