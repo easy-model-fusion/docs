@@ -93,6 +93,7 @@ Adding a model
 
 | The ``emf-cli model add`` command allows users to add a model to their project by specifying the model name and optional configuration flags.
 | For more information on available models, visit the `Hugging Face Models page <https://huggingface.co/models>`_.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you can choose models to download from `models <https://huggingface.co/models>`_.
 
 .. code-block:: html
 
@@ -139,6 +140,7 @@ Remove a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``emf-cli model remove`` command allows users to remove one or more models from their project. Users specify the name of the model(s) they wish to remove as command arguments. Upon execution, it removes the specified models from both the project's configuration file and the device.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you can remove one or more previously downloaded models.
 
 .. code-block:: html
 
@@ -154,10 +156,12 @@ The ``emf-cli model remove`` command allows users to remove one or more models f
     Global Flags:
         --config-path string             config file path (default ".")
 
+
 Update a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``emf-cli model update`` command allows users to update one or more models from their project. Users specify the name of the model(s) they wish to update as command arguments. This command will only update models sourced from `Hugging Face <https://huggingface.co/>`_ and if a newer version is available (determined through the `Hugging Face API <https://huggingface.co/docs/hub/api>`_).
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you update one or more previously downloaded models.
 
 .. code-block:: html
 
@@ -194,9 +198,9 @@ When working with `tokenizers <https://huggingface.co/docs/transformers/main_cla
         emf-cli tokenizer [command]
 
     Available Commands:
-        add         Add one or more tokenizers
-        remove      Remove one or more tokenizers
-        update      Update one or more tokenizers
+        add         Add one or more tokenizers from a specific model
+        remove      Remove one or more tokenizers from a specific model
+        update      Update one or more tokenizers from a specific model
 
     Flags:
         -h, --help   help for tokenizer
@@ -209,7 +213,6 @@ When working with `tokenizers <https://huggingface.co/docs/transformers/main_cla
 Adding a tokenizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|:construction:| WIP |:construction:|
 
 .. note::
 
@@ -234,6 +237,7 @@ Remove a tokenizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``emf-cli tokenizer remove`` command allows users to remove one or more `tokenizers <https://huggingface.co/docs/transformers/main_classes/tokenizer>`_ from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to remove as command arguments.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you remove one or more previously downloaded model tokenizers.
 
 .. code-block:: html
 
@@ -256,6 +260,7 @@ Update a tokenizer
     It currently cannot be determined if a tokenizer can be updated. Therefore, we created this command to allow you to redownload a tokenizer if you have learned that a new version is available.
 
 The ``emf-cli tokenizer update`` command allows users to update one or more `tokenizers <https://huggingface.co/docs/transformers/main_classes/tokenizer>`_ from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you update one or more previously downloaded model tokenizers.
 
 .. code-block:: html
 
