@@ -202,6 +202,7 @@ Use &quot;emf-cli model [command] --help&quot; for more information about a comm
 <div class="line">The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">add</span></code> command allows users to add a model to their project by specifying the model name and optional configuration flags.</div>
 <div class="line">For more information on available models, visit the <a class="reference external" href="https://huggingface.co/models">Hugging Face Models page</a>.</div>
 </div>
+<p>If no argument is given for this command a multi-select GUI will be available in the terminal from where you can choose models to download from <a class="reference external" href="https://huggingface.co/models">models</a>.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Add model by name to your project
 
 Usage:
@@ -242,7 +243,8 @@ Some other flags will be asked like the –model-class, the –path and more.</p
 </section>
 <section id="remove-a-model">
 <h3>Remove a model<a class="headerlink" href="#remove-a-model" title="Permalink to this heading"></a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">remove</span></code> command allows users to remove one or more models from their project. Users specify the name of the model(s) they wish to remove as command arguments. Upon execution, it removes the specified models from both the project’s configuration file and the device.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">remove</span></code> command allows users to remove one or more models from their project. Users specify the name of the model(s) they wish to remove as command arguments. Upon execution, it removes the specified models from both the project’s configuration file and the device.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you can remove one or more previously downloaded models.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Remove one or more models
 
 Usage:
@@ -259,7 +261,8 @@ Global Flags:
 </section>
 <section id="update-a-model">
 <h3>Update a model<a class="headerlink" href="#update-a-model" title="Permalink to this heading"></a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">update</span></code> command allows users to update one or more models from their project. Users specify the name of the model(s) they wish to update as command arguments. This command will only update models sourced from <a class="reference external" href="https://huggingface.co/">Hugging Face</a> and if a newer version is available (determined through the <a class="reference external" href="https://huggingface.co/docs/hub/api">Hugging Face API</a>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">update</span></code> command allows users to update one or more models from their project. Users specify the name of the model(s) they wish to update as command arguments. This command will only update models sourced from <a class="reference external" href="https://huggingface.co/">Hugging Face</a> and if a newer version is available (determined through the <a class="reference external" href="https://huggingface.co/docs/hub/api">Hugging Face API</a>).
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you update one or more previously downloaded models.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Update one or more models
 
 Usage:
@@ -291,9 +294,9 @@ Usage:
     emf-cli tokenizer [command]
 
 Available Commands:
-    add         Add one or more tokenizers
-    remove      Remove one or more tokenizers
-    update      Update one or more tokenizers
+    add         Add one or more tokenizers from a specific model
+    remove      Remove one or more tokenizers from a specific model
+    update      Update one or more tokenizers from a specific model
 
 Flags:
     -h, --help   help for tokenizer
@@ -306,7 +309,6 @@ Use &quot;emf-cli tokenizer [command] --help&quot; for more information about a 
 </div>
 <section id="adding-a-tokenizer">
 <h3>Adding a tokenizer<a class="headerlink" href="#adding-a-tokenizer" title="Permalink to this heading"></a></h3>
-<p>🚧 WIP 🚧</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A recommended tokenizer should already be downloaded by default upon adding a model with the <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">model</span> <span class="pre">add</span></code> command. Users can verify the configured models in the configuration file. If the downloaded tokenizer does not meet the user’s preferences, they are welcome to add one of their choice.</p>
@@ -328,7 +330,8 @@ Global Flags:
 </section>
 <section id="remove-a-tokenizer">
 <h3>Remove a tokenizer<a class="headerlink" href="#remove-a-tokenizer" title="Permalink to this heading"></a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">remove</span></code> command allows users to remove one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to remove as command arguments.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">remove</span></code> command allows users to remove one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to remove as command arguments.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you remove one or more previously downloaded model tokenizers.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Remove one or more tokenizer
 
 Usage:
@@ -348,7 +351,8 @@ Global Flags:
 <p class="admonition-title">Warning</p>
 <p>It currently cannot be determined if a tokenizer can be updated. Therefore, we created this command to allow you to redownload a tokenizer if you have learned that a new version is available.</p>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">update</span></code> command allows users to update one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">emf-cli</span> <span class="pre">tokenizer</span> <span class="pre">update</span></code> command allows users to update one or more <a class="reference external" href="https://huggingface.co/docs/transformers/main_classes/tokenizer">tokenizers</a> from their project. Users specify the name of the model associated with the tokenizer and the tokenizer name(s) they wish to update as command arguments.
+If no argument is given for this command a multi-select GUI will be available in the terminal from where you update one or more previously downloaded model tokenizers.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Update one or more tokenizer
 
 Usage:
