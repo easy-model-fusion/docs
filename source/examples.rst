@@ -11,7 +11,6 @@ See : `EMF Demos - Text to Image GUI <https://github.com/easy-model-fusion/demos
 
 The code defines a graphical user interface (GUI) application using the Tkinter library. This application allows users to generate images from text using the `Stabilityai - Stable Diffusion XL Base 1.0 <https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0>`_ model.
 
-
 Text Prompts from Text Model to Image Generating Model (GUI)
 ----------------------------------------------------------------------------------
 
