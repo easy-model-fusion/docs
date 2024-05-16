@@ -6,7 +6,7 @@ Installation
 
     **Python Requirements**
 
-    EMF CLI requires `Python <https://www.python.org/downloads>`_ version 3.10 or above. You also need to add it to the PATH.
+    EMF CLI requires `Python <https://www.python.org/downloads>`_ We suggest you to use version 3.11, that was used for development and testing. We cannot ensure that other python versions will work. You also need to add it to the PATH.
 
 Install EMF Command Line Interface
 ----------------------------------
@@ -29,8 +29,6 @@ Install using Go
 
 Install it directly using the following command
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-|:construction:| This might not work since the repository is still private |:construction:|
 
 .. code-block:: shell
 
